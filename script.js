@@ -12,17 +12,13 @@ submitButton.addEventListener('click',(event)=>{
 
 async function func(){
 
-	await new Promise((resolve)=>{
-
-	
-setTimeout(()=>{
-
-			//resolve();
-			output.innerHTML=inputs[0].value;
-			
-		},inputs[1].value)
+	await new Promise((resolve,reject)=>{
+		
+		setTimeout(resolve,inputs[1].value)
 		
 	})
+
+	output.innerHTML=inputs[0].value;
 }
 
 
